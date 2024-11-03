@@ -4,10 +4,10 @@ class House:
         self.numbers_of_floors = numbers_of_floors
 
     def go_to(self, new_floor):
+        if new_floor > self.numbers_of_floors or new_floor < 1:
+            print('Такого этажа не существует')
+            return None
         for i in range(new_floor + 1):
-            if new_floor > self.numbers_of_floors:
-                print('Такого этажа не существует')
-                break
             if i > 0:
                 print(i)
 
